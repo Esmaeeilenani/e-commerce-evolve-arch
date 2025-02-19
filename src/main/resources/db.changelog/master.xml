@@ -6,5 +6,5 @@
 
     <property name="autoIncrement" value="true"/>
 
-
+    <includeAll path="changes" relativeToChangelogFile="true"/>
 </databaseChangeLog>
