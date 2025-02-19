@@ -1,0 +1,11 @@
+1- change the design 
+to change any system design we have to answer these questions 
+	1- define the buisness problem
+	2- What are the expected benefits of the new architecture
+	3- What are the key functional and non-functional requirements
+
+
+2- building the solution for module/macroservice/microservice
+	1- problem to solve: identify the problem that the module/macroservice/microservice will solve (section 1 point 1&3 )
+	2- learning the domain, FR and Non-FR
+	3- design the module/macroservice/microservice
