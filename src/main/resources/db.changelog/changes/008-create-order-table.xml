@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.8.xsd">
+
+    <changeSet id="008-create-order-table" author="Esmaeeil ENani">
+
+        <createTable tableName="order">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="username" type="VARCHAR(255)" />
+            <column name="total_price" type="DECIMAL(10,2)">
+                <constraints nullable="false" />
+            </column>
+            <column name="first_name" type="VARCHAR(255)" />
+            <column name="last_name" type="VARCHAR(255)" />
+            <column name="email_address" type="VARCHAR(255)" />
+            <column name="address_line" type="VARCHAR(255)" />
+            <column name="country" type="VARCHAR(255)" />
+            <column name="state" type="VARCHAR(255)" />
+            <column name="zip_code" type="VARCHAR(20)" />
+            <column name="card_name" type="VARCHAR(255)" />
+            <column name="card_number" type="VARCHAR(20)" />
+            <column name="expiration" type="VARCHAR(10)" />
+            <column name="cvv" type="VARCHAR(4)" />
+            <column name="payment_method" type="VARCHAR(50)" />
+
+        </createTable>
+
+
+    </changeSet>
+
+
+</databaseChangeLog>
