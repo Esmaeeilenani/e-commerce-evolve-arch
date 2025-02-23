@@ -1,12 +1,8 @@
 package com.esmaeeil.ecommerce.core.category;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
-@Setter
-@Getter
 public class Category {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -16,4 +12,19 @@ public class Category {
     private String name;
 
 
+    public Long getId() {
+        return this.id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

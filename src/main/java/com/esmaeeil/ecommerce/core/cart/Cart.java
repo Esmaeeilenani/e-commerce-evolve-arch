@@ -2,16 +2,12 @@ package com.esmaeeil.ecommerce.core.cart;
 
 import com.esmaeeil.ecommerce.core.cartitem.CartItem;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
 
 @Entity
-@Setter
-@Getter
 public class Cart {
 
     @Id
@@ -38,4 +34,27 @@ public class Cart {
 
     }
 
+    public Long getId() {
+        return this.id;
+    }
+
+    public String getUsername() {
+        return this.username;
+    }
+
+    public List<CartItem> getCartItems() {
+        return this.cartItems;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setCartItems(List<CartItem> cartItems) {
+        this.cartItems = cartItems;
+    }
 }
