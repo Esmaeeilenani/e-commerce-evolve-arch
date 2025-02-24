@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -56,5 +57,13 @@ public class Cart {
 
     public void setCartItems(List<CartItem> cartItems) {
         this.cartItems = cartItems;
+    }
+
+    public void addItem(CartItem cartItem) {
+        if (this.cartItems == null) {
+            this.cartItems = new ArrayList<>(0);
+        }
+        cartItem.setCartId(this.id);
+        this.cartItems.add(cartItem);
     }
 }
