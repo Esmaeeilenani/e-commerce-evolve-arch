@@ -1,5 +1,6 @@
 package com.esmaeeil.ecommerce.core.order;
 
+import com.esmaeeil.ecommerce.domain.entity.order.PaymentMethod;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -170,7 +171,5 @@ public class Order {
     }
 
 
-    public enum PaymentMethod{
-        CREDIT_CARD,DEBIT_CARD,PAYPAL
-    }
+
 }
