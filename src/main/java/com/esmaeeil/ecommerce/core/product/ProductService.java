@@ -10,10 +10,13 @@ import java.util.List;
 
 @Service
 @Transactional
-@RequiredArgsConstructor
 public class ProductService {
 
     private final ProductRepository productRepository;
+
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     public BigDecimal getProductPriceById(Long productId){
         return productRepository

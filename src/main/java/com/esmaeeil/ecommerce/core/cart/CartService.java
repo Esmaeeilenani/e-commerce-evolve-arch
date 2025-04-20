@@ -11,12 +11,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-@RequiredArgsConstructor
 public class CartService {
 
     private final CartRepository cartRepository;
     private final ProductService productService;
 
+    public CartService(CartRepository cartRepository, ProductService productService) {
+        this.cartRepository = cartRepository;
+        this.productService = productService;
+    }
 
     public CartDto getDtoByUsername(String username) {
         Cart cart = getByUsername(username);

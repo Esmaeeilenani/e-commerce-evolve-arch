@@ -7,12 +7,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RequiredArgsConstructor
 @RestController
 @RequestMapping("v1/api/carts")
 class CartController {
 
     private final CartService cartService;
+
+
+    public CartController(CartService cartService) {
+        this.cartService = cartService;
+    }
 
     @GetMapping("by-username/{username}")
     public ResponseEntity<CartDto> getCartByUsername(@PathVariable String username) {
